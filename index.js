@@ -7,12 +7,23 @@ function getAllMemes() {
     fetch('https://api.imgflip.com/get_memes')
     .then(resp => resp.json())
     .then(data => {
-        const mainContent = document.getElementById('main-content')
-        const memeName = data.data.memes.forEach(element => console.log(element.name))
+        const memeList = document.getElementById('memes-list')
+        const memeArry = data.data.memes
+        memeList.innerHTML = renderAllMemeNames(memeArry)
     })
 }
 
-
-function render(params) {
-    
+function renderAllMemeNames(Arry) {
+    return Arry.map(element => renderListItems(element)).join('')
 }
+
+function renderListItems(element) {
+    return `
+     <li id=${element.name}> ${element.name}</li>
+    `
+}
+
+
+
+
+
