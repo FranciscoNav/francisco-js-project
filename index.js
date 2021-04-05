@@ -4,10 +4,15 @@ document.addEventListener('DOMContentLoaded', ()=>{
 })
 
 function getAllMemes() {
-    fetch('	https://api.imgflip.com/get_memes')
+    fetch('https://api.imgflip.com/get_memes')
     .then(resp => resp.json())
     .then(data => {
         const mainContent = document.getElementById('main-content')
-        mainContent.innerHTML = data
+        const memeName = data.data.memes.forEach(element => console.log(element.name))
     })
+}
+
+
+function render(params) {
+    
 }
