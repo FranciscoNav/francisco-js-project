@@ -31,8 +31,15 @@ function memeListListener() {
 
 function displayMeme(event) {
     console.log(event.target)
-    const imgTag = document.createElement('img')
-    imgTag.src = event.target.dataset.type
-    event.target.appendChild(imgTag)
+    const clickedData = event.target.dataset.type
+   
+    if(event.target.childElementCount === 1){
+        const childNode = event.target.children[0]
+        event.target.removeChild(childNode)
+    }else{
+        const imgTag = document.createElement('img')
+        imgTag.src = clickedData
+        event.target.appendChild(imgTag)
+    }
 }
 
