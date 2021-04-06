@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', ()=>{
     getAllMemes()
-    console.log('Pages was loaded')
+    console.log('Pages was loaded successfully')
 })
 
 function getAllMemes() {
@@ -30,7 +30,6 @@ function memeListListener() {
 }
 
 function displayMeme(event) {
-    console.log(event.target)
     const clickedData = event.target.dataset.type
    
     if(event.target.childElementCount === 1){
