@@ -11,6 +11,7 @@ function getAllMemes() {
         const memeArry = data.data.memes
         memeList.innerHTML = renderAllMemeNames(memeArry)
     })
+    memeListListener()
 }
 
 function renderAllMemeNames(Arry) {
@@ -19,11 +20,19 @@ function renderAllMemeNames(Arry) {
 
 function renderListItems(element) {
     return `
-     <li id=${element.name}> ${element.name}</li>
+     <li id=${element.name} data-type=${element.url}> ${element.name}</li>
     `
 }
 
+function memeListListener() {
+    const memeList = document.getElementById('memes-list')
+    memeList.addEventListener('click',displayMeme)
+}
 
-
-
+function displayMeme(event) {
+    console.log(event.target)
+    const imgTag = document.createElement('img')
+    imgTag.src = event.target.dataset.type
+    event.target.appendChild(imgTag)
+}
 
