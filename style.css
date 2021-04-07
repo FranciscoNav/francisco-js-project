@@ -30,3 +30,7 @@ img{
 .activated-heart {
   color: red;
 }
+
+#button{
+  border-radius: 4px;
+}

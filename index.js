@@ -21,7 +21,7 @@ function renderAllMemeNames(Arry) {
 function renderListItems(element) {
     return `
      <li id="meme" class = meme-li data-type=${element.url}> ${element.name}
-        <button id='button' type="Like- button">&#x2661;</button>
+        <button id='button' type="Like-button">&#x2661;</button>
      </li>
      `
 }
