@@ -27,4 +27,6 @@ img{
   max-height: 500px;
 }
 
-
+.activated-heart {
+  color: red;
+}

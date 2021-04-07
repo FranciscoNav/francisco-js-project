@@ -21,7 +21,7 @@ function renderAllMemeNames(Arry) {
 function renderListItems(element) {
     return `
      <li id="meme" class = meme-li data-type=${element.url}> ${element.name}
-        <button id='button' type="Like- button"> &#x2661;</button>
+        <button id='button' type="Like- button">&#x2661;</button>
      </li>
      `
 }
@@ -31,16 +31,12 @@ function memeListListener() {
     memeList.addEventListener('click',handleClick)
 }
 
-const EMPTY_HEART = '♡'
-const FULL_HEART = '♥'
-
 function handleClick(event) {
     if (event.target.id === 'meme') {
         displayMeme(event)
     }else{
-        event.target.innerHTMl = FULL_HEART
+        displayHeart(event)
     }
-
 }
 
 function displayMeme(event) {
@@ -57,5 +53,18 @@ function displayMeme(event) {
     }
 }
 
+function displayHeart(event) {
+    let heartButton = event.target
+    const fullHeart = '&#x2764'
+    const emptyHeart = '&#x2661'
 
+    if(heartButton.className === 'activated-heart'){
+        heartButton.innerHTML = emptyHeart
+        heartButton.className = ""
+    }else{
+        heartButton.innerHTML = fullHeart
+        heartButton.className = 'activated-heart'
+    } 
+    console.log(heartButton.innerHTML)
+}
 
