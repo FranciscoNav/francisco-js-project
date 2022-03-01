@@ -6,6 +6,7 @@ I also added a like button with a heart icon, so the user can mark their favorit
 
 ## Setup
 **- Fork and clone this repository**.
+
 **- Navigate to the repository in the terminal**.
 
 Then run:
