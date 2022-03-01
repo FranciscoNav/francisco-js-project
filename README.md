@@ -5,7 +5,8 @@ The primary purpose of this website is display a meme every time a user clicks o
 I also added a like button with a heart icon, so the user can mark their favorite memes when they are looking at the list. The heart icon turns read when clicked and gray when it is un-clicked. 
 
 ## Setup
-**Fork and clone this repository**.
+**- Fork and clone this repository**.
+**- Navigate to the repository in the terminal**.
 
 Then run:
 ```sh
