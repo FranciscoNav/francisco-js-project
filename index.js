@@ -22,7 +22,6 @@ function renderListItems(element) {
     return `
      <li id="meme" class = meme-li data-type=${element.url}> ${element.name}
         <button id='button' type="Like-button">&#x2661;</button>
-        <button class= "x" >X</button>
      </li>
      `
 }
@@ -68,4 +67,3 @@ function displayHeart(event) {
     } 
     console.log(heartButton.innerHTML)
 }
-
